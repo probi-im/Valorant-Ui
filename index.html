@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Valorant UI</title>
+  </head>
+  <body>
+    <header>
+      <div class="quests">
+        <img class="missions" src="img/missions.png" />
+        <img class="quest" src="img/agents-quests.png" />
+        <img class="quest" src="img/rewards-quests.png" />
+      </div>
+      <nav class="navbar">
+        <ul class="navbar-nav">
+          <li class="nav-item active">Actus</li>
+          <li class="nav-item">Collection</li>
+          <li class="nav-item large">Jouer</li>
+          <li class="nav-item">Carrière</li>
+          <li class="nav-item">Boutique</li>
+        </ul>
+      </nav>
+      <div class="currencies">
+        <div class="currency">
+          <img src="img/valorant-point.png" width="19px" />
+          <span class="amount">0</span>
+        </div>
+        <div class="currency">
+          <img src="img/radianite-points.png" width="19px" />
+          <span class="amount">0</span>
+        </div>
+      </div>
+    </header>
+    <div class="left-sidebar">
+      <div class="left-sidebar__header">
+        <div class="left-sidebar__header-logo">
+          <img src="img/valorant-logo-full.png" width="16px" />
+        </div>
+        <div class="left-sidebar__header-brand">
+          <img src="img/valorant-brand.svg" width="115px" />
+        </div>
+        <div class="v-divider"></div>
+        <div class="left-sidebar__header-toggle">
+          <img src="img/menu-toggle.svg" width="30px" />
+        </div>
+      </div>
+      <div class="left-sidebar__content">
+        <div class="left-sidebar__content-button">paramètres</div>
+        <div class="left-sidebar__content-button">support</div>
+        <div class="left-sidebar__content-button">à propos</div>
+        <div class="left-sidebar__content__bottom-buttons">
+          <div class="left-sidebar__content-button large">déconnexion</div>
+          <div class="left-sidebar__content-button large warn">
+            retourner au bureau
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="right-sidebar">
+      <div class="right-sidebar__header">
+        <div class="right-sidebar__header-logo">
+          <img src="img/social-icon.svg" />
+        </div>
+        <div class="right-sidebar__header-brand">
+          social
+        </div>
+      </div>
+      <div class="right-sidebar__content">
+        <div class="right-sidebar__content__user-button currentuser">
+          <div class="profil-icon">
+            <img src="img/lol-icon.png" width="48px" />
+          </div>
+          <div class="infos">
+            <span class="username">Probicieux</span
+            ><span class="status">Disponible</span>
+          </div>
+        </div>
+        <div class="right-sidebar__content__dropdown-button"></div>
+        <div class="right-sidebar__content__dropdown-button"></div>
+        <div class="right-sidebar__content__dropdown-button"></div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

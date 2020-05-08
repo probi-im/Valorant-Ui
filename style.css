@@ -1,0 +1,296 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  background-image: url(img/background.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+header {
+  height: 50px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.75);
+  box-shadow: inset 0px 50px 50px -30px rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+}
+.quests,
+.currencies {
+  width: 160px;
+  display: flex;
+  align-items: center;
+}
+.quests {
+  margin-left: auto;
+}
+.quests img {
+  margin: 0 5px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+.quests .missions {
+  padding: 5px;
+  border-left: 2px solid transparent;
+}
+.quests .missions:hover {
+  border-left: 2px solid rgba(255, 255, 255, 0.5);
+}
+.quests .quest {
+  padding: 2px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+}
+.quests .quest:hover {
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+.navbar {
+  margin: 0 50px;
+  height: 100%;
+}
+.navbar-nav {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  background-color: transparent;
+  height: 100%;
+}
+.navbar-nav .nav-item {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  text-transform: uppercase;
+  color: #cdced3;
+  letter-spacing: 2px;
+  cursor: pointer;
+  position: relative;
+}
+.nav-item.large {
+  font-size: 1.7rem;
+}
+.nav-item:hover {
+  color: white;
+}
+.nav-item.active {
+  color: #eaeeb2;
+}
+.nav-item::after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%) rotate(45deg);
+}
+.currencies {
+  margin-right: auto;
+}
+.currencies .currency {
+  margin: 0 5px;
+  width: 70px;
+  display: flex;
+  align-items: center;
+}
+.currency img {
+  border-radius: 50%;
+  cursor: pointer;
+}
+.currency img:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.currency .amount {
+  margin-left: 5px;
+  color: white;
+}
+
+.v-divider {
+  width: 1px;
+  background-color: #787a83;
+  height: 30px;
+  margin: 0 2px;
+}
+
+.left-sidebar {
+  position: absolute;
+  top: 0;
+  left: -260px;
+  width: 260px;
+  height: 100%;
+  backdrop-filter: blur(2px);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.1s ease;
+}
+.left-sidebar__header {
+  width: 101px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transform: translateX(260px);
+  transition: all 0.1s ease;
+}
+.left-sidebar__header-logo {
+  margin: 0 12px;
+  padding: 6px;
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+}
+.left-sidebar__header-brand {
+  display: flex;
+  align-items: center;
+  width: 0px;
+  overflow: hidden;
+  transition: all 0.1s ease;
+}
+.left-sidebar__header-toggle {
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.left-sidebar__content {
+  flex: 1;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+.left-sidebar__content-button {
+  width: 100%;
+  height: 60px;
+  background-color: #f4f4f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #616161;
+  cursor: pointer;
+  margin-bottom: 1px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.left-sidebar__content-button:hover {
+  background-color: #d7d7d7;
+  color: #565656;
+}
+.left-sidebar__content-button:last-child {
+  margin-bottom: 0;
+}
+.left-sidebar__content-button.large {
+  height: 80px;
+}
+.left-sidebar__content-button.warn {
+  background-color: #cc6d72;
+  color: #512c2e;
+}
+.left-sidebar__content-button:hover.warn {
+  background-color: #b35f63;
+  color: #482628;
+}
+.left-sidebar__content__bottom-buttons {
+  margin-top: auto;
+}
+
+.left-sidebar.toggle {
+  left: 0;
+}
+.left-sidebar.toggle .left-sidebar__header {
+  width: 260px;
+  transform: none;
+}
+.left-sidebar.toggle .left-sidebar__header-brand {
+  margin-right: auto;
+  width: 115px;
+}
+
+.right-sidebar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 260px;
+  height: 100%;
+  backdrop-filter: blur(2px);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.1s ease;
+}
+.right-sidebar__header {
+  width: 101px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+.right-sidebar__header-logo {
+  margin: 0 12px;
+  display: flex;
+  align-items: center;
+}
+.right-sidebar__header-brand {
+  text-transform: uppercase;
+  color: white;
+}
+.right-sidebar__content {
+  flex: 1;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+.right-sidebar__content__user-button {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: default;
+}
+.right-sidebar__content__user-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.right-sidebar__content__user-button.currentuser::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -7px;
+  width: 4px;
+  height: 100%;
+  background-color: lightgoldenrodyellow;
+}
+.right-sidebar__content__user-button.currentuser::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -7px;
+  width: 4px;
+  height: 4px;
+  background-color: lightgoldenrodyellow;
+  transform: translateX(-50%) rotate(45deg);
+}
+.right-sidebar__content__user-button .profil-icon {
+  padding: 8px;
+  background-color: rgb(255, 230, 162);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.right-sidebar__content__user-button .infos {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+.infos .username {
+  color: white;
+}
+.infos .status {
+  color: lightgreen;
+  font-size: 0.8rem;
+}
