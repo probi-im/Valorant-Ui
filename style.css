@@ -128,7 +128,7 @@ header {
   backdrop-filter: blur(2px);
   display: flex;
   flex-direction: column;
-  transition: all 0.1s ease;
+  transition: all 0.15s ease;
 }
 .left-sidebar__header {
   width: 101px;
@@ -224,7 +224,7 @@ header {
   transition: all 0.1s ease;
 }
 .right-sidebar__header {
-  width: 101px;
+  width: 100%;
   height: 50px;
   display: flex;
   align-items: center;
@@ -232,13 +232,16 @@ header {
   transition: all 0.1s ease;
 }
 .right-sidebar__header-logo {
-  margin: 0 12px;
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: 64px;
 }
 .right-sidebar__header-brand {
   text-transform: uppercase;
   color: white;
+  margin-left: 10px;
+  letter-spacing: 2px;
 }
 .right-sidebar__content {
   flex: 1;
@@ -252,6 +255,7 @@ header {
   align-items: center;
   position: relative;
   cursor: default;
+  margin-bottom: 2px;
 }
 .right-sidebar__content__user-button:hover {
   background-color: rgba(255, 255, 255, 0.1);
@@ -276,7 +280,8 @@ header {
   transform: translateX(-50%) rotate(45deg);
 }
 .right-sidebar__content__user-button .profil-icon {
-  padding: 8px;
+  width: 64px;
+  height: 64px;
   background-color: rgb(255, 230, 162);
   display: flex;
   align-items: center;
@@ -286,11 +291,62 @@ header {
   display: flex;
   flex-direction: column;
   margin-left: 10px;
+  text-transform: capitalize;
 }
 .infos .username {
+  text-transform: capitalize;
   color: white;
 }
 .infos .status {
   color: lightgreen;
   font-size: 0.8rem;
+}
+
+.right-sidebar__content__dropdown-button {
+  width: 100%;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  display: flex;
+  align-items: center;
+}
+.right-sidebar__content__dropdown-button .user-amount {
+  width: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.right-sidebar__content__dropdown-button .category-name {
+  margin-left: 10px;
+  text-transform: uppercase;
+  margin-right: auto;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+.right-sidebar__content__dropdown-button .toggler {
+  width: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.right-sidebar__content__dropdown-button .toggler:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+.right-sidebar__bottom-actions {
+  display: flex;
+  width: 100%;
+  height: 42px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  position: absolute;
+  bottom: 0;
+}
+.add-friend,
+.search-user {
+  width: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

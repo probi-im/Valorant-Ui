@@ -1,7 +1,7 @@
 const leftSidebarToggleRef = document.querySelector(".left-sidebar__header");
 const leftSidebarRef = document.querySelector(".left-sidebar");
 
-leftSidebarToggleRef.addEventListener("click", () => {
+leftSidebarToggleRef.addEventListener("mousedown", () => {
   document.querySelector(".left-sidebar").classList.toggle("toggle");
 });
 leftSidebarRef.addEventListener("mouseleave", () => {
